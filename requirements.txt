@@ -1,0 +1,16 @@
+# Core dependencies
+openai>=1.0.0
+pyyaml
+tiktoken
+pandas
+
+# Environment dependencies
+alfworld
+
+# Optional: SciWorld (scientific reasoning)
+# pip install scienceworld
+
+# Optional: WebShop (e-commerce navigation)
+# Install from: https://github.com/princeton-nlp/WebShop
+# git clone https://github.com/princeton-nlp/WebShop
+# cd WebShop && pip install -e .

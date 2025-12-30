@@ -1,0 +1,52 @@
+# ZipAct Experiment Configuration
+
+# Agents to evaluate
+agents:
+  - zipact
+  - react
+  - reflexion
+  - obs_mask
+  - summary
+
+# Models to test
+models:
+  - gpt-4o-mini
+  - gpt-4o
+
+# Datasets and configurations
+datasets:
+  # ALFWorld: Household tasks
+  alfworld:
+    splits:
+      - eval_out_of_distribution
+      - eval_in_distribution
+    max_steps: 50
+    episodes: 20
+  
+  # SciWorld: Scientific reasoning
+  # Task names match SciWorld API directly
+  sciworld:
+    tasks:
+      - boil                    # Boil water
+      - melt                    # Melt ice/substances
+      - freeze                  # Freeze water
+      - change-the-state-of-matter-of  # Generic phase change
+      - use-thermometer         # Temperature measurement
+      - power-component         # Electrical circuits
+      - test-conductivity       # Test conductivity
+      - chemistry-mix           # Mix chemicals
+    variations: 5
+    max_steps: 50
+    episodes: 10
+    simplifications_preset: easy
+  
+  # WebShop: E-commerce navigation
+  webshop:
+    max_steps: 30
+    episodes: 20
+
+# Experiment settings
+settings:
+  log_dir: logs
+  verbose: false
+  seed: 42

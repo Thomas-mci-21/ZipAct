@@ -38,23 +38,7 @@ $$S_t = \langle G_t, W_t, C_t \rangle$$
 <img src="assets/context_snowball.png" alt="Context Snowball Problem" width="800"/>
 </div>
 
-**ReAct-based agents** suffer from quadratic complexity $O(T^2)$ as context grows unboundedly. **ZipAct** achieves linear complexity $O(T)$ through state compression, reducing token usage by **~70%** while maintaining performance.
-
-
-## � Results
-
-### Performance Comparison on ALFWorld
-
-| Model | Agent | Success Rate | Avg Tokens/Episode | Token Reduction |
-|-------|-------|--------------|-------------------|-----------------|
-| GPT-4o | ReAct | 85.1% | 10,500 | baseline |
-| GPT-4o | **ZipAct** | **85.0%** | **3,000** | **-71%** ✅ |
-| GPT-4o | Reflexion | 93.3% | 23,000 | +120% ❌ |
-| GPT-4o-mini | ReAct | 53.0% | 8,200 | baseline |
-| GPT-4o-mini | **ZipAct** | **53.0%** | **2,500** | **-68%** ✅ |
-| GPT-4o-mini | Reflexion | 66.4% | 18,000 | +120% ❌ |
-
-**Key Insight**: ZipAct maintains competitive success rates while dramatically reducing token consumption, making it ideal for cost-sensitive deployments.
+**ReAct-based agents** suffer from quadratic complexity $O(T^2)$ as context grows unboundedly. **ZipAct** achieves linear complexity $O(T)$ through state compression, significantly reducing token usage while maintaining performance.
 
 ## 🚀 Quick Start
 
@@ -107,19 +91,16 @@ python run_alfworld.py --agent zipact --episodes 1 --verbose
 ```bash
 # Single experiment
 python run_alfworld.py \
-    --agent zipact \
-    --model gpt-4o-mini \
-    --episodes 10 \
-    --max_steps 50
-
-# Batch experiments (all agents)
-./run_batch.ps1 -Episodes 20
+  --agent zipact \
+  --model gpt-4o-mini \
+  --episodes 10 \
+  --max_steps 50
 
 # Multi-dataset support
 python run_experiment.py \
-    --dataset alfworld \
-    --agent zipact \
-    --episodes 10
+  --dataset alfworld \
+  --agent zipact \
+  --episodes 10
 ```
 
 ### Analyze Results
@@ -201,33 +182,4 @@ ZipAct/
 
 We welcome contributions! Please feel free to submit issues or pull requests.
 
-## � Citation
-
-If you find this code useful, please cite our paper:
-
-```bibtex
-@article{pan2025zipact,
-  title={ZipAct: Zipping Interaction History into a Compact State for Efficient LLM Agents},
-  author={Pan, Zhiming and Luo, Xiao},
-  journal={arXiv preprint arXiv:2501.xxxxx},
-  year={2025}
-}
-```
-
-## � License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- [ALFWorld](https://github.com/alfworld/alfworld) - Environment framework
-- [ReAct](https://arxiv.org/abs/2210.03629) - Yao et al., ICLR 2023
-- [Reflexion](https://arxiv.org/abs/2303.11366) - Shinn et al., NeurIPS 2023
-
-## � Contact
-
-- **Zhiming Pan** - thomas_p@stu.pku.edu.cn
-- **Xiao Luo** - xiao.luo@wisc.edu
-
-For questions or issues, please open a GitHub issue.
 

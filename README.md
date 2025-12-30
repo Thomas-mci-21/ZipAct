@@ -1,18 +1,4 @@
-# ZipAct: Zipping Interaction History into a Compact State
-
-<div align="center">
-
-[![arXiv](https://img.shields.io/badge/arXiv-2501.xxxxx-b31b1b.svg)](https://arxiv.org/)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-**Efficient LLM Agents via State-Dependent Reasoning**
-
-[Paper](https://arxiv.org/) | [Demo](#-usage) | [Documentation](#-documentation)
-
-</div>
-
----
+# ZipAct: Zipping Interaction History into a Compact State for Efficient LLM Agents
 
 ## 🎯 Overview
 
@@ -163,20 +149,6 @@ ZipAct/
 ├── run_experiment.py   # Multi-dataset runner
 └── analyze_results.py  # Results analysis
 ```
-
-## 🔬 Supported Datasets
-
-| Dataset | Status | Description |
-|---------|--------|-------------|
-| **ALFWorld** | ✅ Fully Supported | Household tasks (cleaning, heating, etc.) |
-| **SciWorld** | 🚧 Interface Ready | Scientific reasoning tasks |
-| **WebShop** | 🚧 Interface Ready | E-commerce navigation |
-
-## 📖 Documentation
-
-- **[Quick Start](QUICKSTART.md)** - Detailed setup and usage guide
-- **[Project Structure](STRUCTURE.md)** - Code organization and architecture
-- **[API Documentation](src/)** - Inline code documentation
 
 ## 🤝 Contributing
 

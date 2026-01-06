@@ -21,7 +21,7 @@
 ### The Context Snowball Problem
 
 <div align="center">
-<img src="assets/context_snowball.png" alt="Context Snowball Problem" width="800"/>
+<img src="assets/context_snowball.png" alt="Context Snowball Problem" width="400"/>
 </div>
 
 **ReAct-based agents** suffer from quadratic complexity $O(T^2)$ as context grows unboundedly. **ZipAct** achieves linear complexity $O(T)$ through state compression, significantly reducing token usage while maintaining performance.

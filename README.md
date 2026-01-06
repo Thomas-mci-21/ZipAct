@@ -5,13 +5,7 @@
 **ZipAct** addresses the "Context Snowball" problem in LLM agents by shifting from **history-dependent** to **state-dependent** reasoning.
 
 <div align="center">
-<img src="assets/zipact_architecture.png" alt="ZipAct Architecture" width="800"/>
-</div>
-
-### System Workflow
-
-<div align="center">
-<img src="assets/zipact_workflow.png" alt="ZipAct System Workflow" width="900"/>
+<img src="pipeline.png" alt="ZipAct Architecture" width="800"/>
 </div>
 
 **ZipAct** operates through a cyclical interaction between the **Actor** and **State Updater**:

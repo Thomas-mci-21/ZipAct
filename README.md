@@ -8,15 +8,21 @@
 <img src="assets/zipact_architecture.png" alt="ZipAct Architecture" width="800"/>
 </div>
 
-### Key Idea
+### System Workflow
 
-Instead of accumulating raw interaction history, ZipAct maintains a compact structured state:
+<div align="center">
+<img src="assets/zipact_workflow.png" alt="ZipAct System Workflow" width="900"/>
+</div>
 
-$$S_t = \langle G_t, W_t, C_t \rangle$$
+**ZipAct** operates through a cyclical interaction between the **Actor** and **State Updater**:
 
-- **Goal State ($G_t$)**: Tracks hierarchical task progress
-- **World State ($W_t$)**: Abstracts environment into task-relevant variables  
-- **Constraint State ($C_t$)**: Anti-loop mechanism for avoiding failures
+- **Actor (π)**: Takes actions based on the current compressed state $S_t$
+- **State Updater (U)**: Updates the state table by processing observations and actions
+- **State Table**: Maintains three compact components:
+  - **Goal State ($G_t$)**: Tracks hierarchical task progress and current objectives
+  - **World State ($W_t$)**: Abstracts environment into task-relevant variables  
+  - **Constraint State ($C_t$)**: Anti-loop mechanism for avoiding repeated failures
+- **Environment**: Provides observations based on agent actions across multiple domains (ALFWorld, ScienceWorld, WebShop)
 
 ### The Context Snowball Problem
 
